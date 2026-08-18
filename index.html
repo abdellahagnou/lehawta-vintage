@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الهوتة — سوق الحوايج المستعملة</title>
+<meta name="description" content="الهوتة — سوق حوايج فينتاج مختارة بعناية. قفاطن، جلابيب، وإكسسوارات فريدة. اطلب عبر واتساب بسهولة.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#14100c">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="الهوتة — سوق الحوايج المستعملة">
+<meta property="og:description" content="قطع فينتاج فريدة ومختارة بعناية. تسوّق مباشرة وتواصل عبر واتساب.">
+<meta property="og:image" content="logo.svg">
+<meta property="og:locale" content="ar_MA">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="الهوتة — سوق الحوايج المستعملة">
+<meta name="twitter:description" content="قطع فينتاج فريدة ومختارة بعناية. تسوّق مباشرة وتواصل عبر واتساب.">
+<meta name="twitter:image" content="logo.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== الهيدر ===== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#" class="logo">
+        <img src="logo.svg" alt="الهوتة Vintage" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="#catalog">الكتالوگ</a>
+        <a href="#story">شكون حنا</a>
+        <a href="#contact">تواصل معانا</a>
+      </nav>
+      <button class="cart-btn" id="cart-toggle" aria-label="السلة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== الهيرو ===== -->
+  <section class="hero-visual">
+   <div class="hero-logo-box">
+     <img src="https://images.unsplash.com/photo-1668735431773-7cd27fddbd17?auto=format&fit=crop&w=1200&q=80" alt="الهوتة" class="hero-logo-img is-active">
+      <img src="https://images.unsplash.com/photo-1696713443647-3aa49dbb22c4?auto=format&fit=crop&w=1200&q=80" alt="الهوتة" class="hero-logo-img">
+      <img src="https://images.unsplash.com/photo-1706816997849-366661133349?auto=format&fit=crop&w=1200&q=80" alt="الهوتة" class="hero-logo-img">
+    </div>
+<div id="mouse-scroll">
+      <div class="mouse">
+        <span class="mouse-in"></span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">كل قطعة... كاينة مرة وحدة</p>
+      <h1 class="hero-title">الكنز ديالك<br>راه كاتسناك</h1>
+      <p class="hero-sub">قفاطن، جلابيب، وحوايج فينتاج مختارين بعناية. ملي تتباع القطعة، كتخرج من السوق نهائياً.</p>
+      <a href="#catalog" class="btn-primary">شوف الكولكسيون</a>
+    </div>
+  </section>
+
+  <!-- ===== فلاتر الكاتالوگ ===== -->
+  <section class="catalog" id="catalog">
+    <div class="wrap">
+      <div class="catalog-head">
+        <h2>الكولكسيون</h2>
+        <div class="filters" role="tablist" aria-label="فلترة الحوايج">
+          <button class="filter-btn is-active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="traditional">تقليدي</button>
+          <button class="filter-btn" data-filter="modern">عصري</button>
+        </div>
+      </div>
+
+      <div class="grid" id="product-grid">
+        <article class="card" data-category="traditional" data-product-id="kaftan" data-product-name="قفطان مطرز يدوي" data-price="450">
+          <div class="card-media">
+           <img src="https://images.unsplash.com/photo-1585531708916-ef80350126d8?auto=format&fit=crop&w=800&q=80" alt="قفطان مطرز يدوي" class="product-img">
+             <span class="badge badge-unique">قطعة وحيدة</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">قفطان مطرز يدوي</h3>
+            <div class="card-footer">
+              <span class="card-price">450 درهم</span>
+              <button class="btn-add">نبغيها</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="traditional" data-product-id="jellaba" data-product-name="جلابة صوف شتوية" data-price="280">
+          <div class="card-media">
+           <img src="https://images.unsplash.com/photo-1532432634568-eef7e67e9f53?auto=format&fit=crop&w=800&q=80" alt="جلابة صوف شتوية" class="product-img">
+             <span class="badge badge-unique">قطعة وحيدة</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">جلابة صوف شتوية</h3>
+            <div class="card-footer">
+              <span class="card-price">280 درهم</span>
+              <button class="btn-add">نبغيها</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="modern" data-product-id="jeans-jacket" data-product-name="جاكيط جينز فينتاج" data-price="220">
+          <div class="card-media">
+            <div class="img-placeholder">صورة الجاكيط</div>
+            <span class="badge badge-unique">قطعة وحيدة</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">جاكيط جينز فينتاج</h3>
+            <div class="card-footer">
+              <span class="card-price">220 درهم</span>
+              <button class="btn-add">نبغيها</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card sold" data-category="modern" data-product-id="oversize-hoodie" data-product-name="هودي أوفرسايز" data-price="180">
+          <div class="card-media">
+            <div class="img-placeholder">صورة الهودي</div>
+            <span class="badge badge-sold">بيعت</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">هودي أوفرسايز</h3>
+            <div class="card-footer">
+              <span class="card-price">180 درهم</span>
+              <button class="btn-add" disabled>ماشي متوفرة</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="traditional" data-product-id="belt" data-product-name="بلغة جلد أصلي" data-price="150">
+          <div class="card-media">
+            <div class="img-placeholder">صورة البلغة</div>
+            <span class="badge badge-unique">قطعة وحيدة</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">بلغة جلد أصلي</h3>
+            <div class="card-footer">
+              <span class="card-price">150 درهم</span>
+              <button class="btn-add">نبغيها</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="modern" data-product-id="vintage-shirt" data-product-name="تيشيرت طبعة قديمة" data-price="90">
+          <div class="card-media">
+            <div class="img-placeholder">صورة التيشيرت</div>
+            <span class="badge badge-unique">قطعة وحيدة</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">تيشيرت طبعة قديمة</h3>
+            <div class="card-footer">
+              <span class="card-price">90 درهم</span>
+              <button class="btn-add">نبغيها</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <aside class="cart-overlay" id="cart-overlay" aria-hidden="true"></aside>
+  <aside class="cart-drawer" id="cart-drawer" aria-live="polite" aria-label="السلة">
+    <div class="cart-header">
+      <h3>السلة</h3>
+      <button class="cart-close" id="cart-close" aria-label="إغلاق السلة">×</button>
+    </div>
+    <div class="cart-body" id="cart-items">
+      <div class="cart-empty">السلة فاضية. اختار القطعة اللي تحبها.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span>المجموع</span>
+        <strong id="cart-total">0 درهم</strong>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">إرسال الطلب عبر واتساب</button>
+    </div>
+  </aside>
+
+  <section class="cta-strip">
+    <div class="wrap cta-inner">
+      <div>
+        <p class="hero-eyebrow">طلب سريع</p>
+        <h3>عندك قطعتك المفضلة؟</h3>
+      </div>
+      <a href="https://wa.me/212779794263" target="_blank" rel="noreferrer" class="btn-primary">تواصل عبر واتساب</a>
+    </div>
+  </section>
+
+  <!-- ===== نقط الثقة ===== -->
+  <section class="trust-badges">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="16" width="32" height="26" rx="1"/>
+          <line x1="4" y1="24" x2="30" y2="24"/>
+          <line x1="8" y1="20" x2="24" y2="20"/>
+          <path d="M36 26h12l10 10v6h-22z"/>
+          <circle cx="18" cy="46" r="5"/>
+          <circle cx="48" cy="46" r="5"/>
+        </svg>
+        <h3>توصيل سريع</h3>
+        <p>كنوصلو للحوايج ديالك أينما كنتي</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 30v20h24V30"/>
+          <path d="M14 30l6-8h16l6 8"/>
+          <line x1="26" y1="22" x2="26" y2="50"/>
+          <circle cx="48" cy="20" r="8"/>
+          <path d="M44 20l3 3 6-6"/>
+        </svg>
+        <h3>الخلاص عند الاستلام</h3>
+        <p>خلصي غير ملي توصلك السلعة</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="32" cy="18" r="9"/>
+          <path d="M32 27c-6 0-9 4-9 4v3h7"/>
+          <path d="M40 34l6 6-3 3-6-6"/>
+          <rect x="42" y="38" width="16" height="12" rx="2"/>
+          <circle cx="50" cy="44" r="2.5"/>
+        </svg>
+        <h3>خدمة الزبناء</h3>
+        <p>متوفرين نجاوبوك من الإثنين للسبت</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 6l4.5 9.2 10.2 1.5-7.4 7.2 1.7 10.1L32 29.2l-9 4.8 1.7-10.1-7.4-7.2 10.2-1.5z"/>
+        </svg>
+        <h3>الرضا مضمون</h3>
+        <p>قطع مختارة بعناية وجودة مضمونة</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-copy">
+        <p class="hero-eyebrow">شكون حنا</p>
+        <h2>نحرس النضارة والهوية</h2>
+        <p>الهوتة هي فضاء صغير للملابس العتيقة والقطع اللي كتخلي الستايل خاص. نختار كل شيء بعناية، من الملابس التقليدية إلى القطع المعاصرة اللي كتعطي شخصية مميزة.</p>
+        <div class="story-points">
+          <span>قطع أصلية</span>
+          <span>تجهيز سريع</span>
+          <span>اختيار بعناية</span>
+        </div>
+      </div>
+      <div class="story-box">
+        <p class="story-quote">“كل قطعة عندها قصة، وهدفنا هو إعطاها مكانها الجديد.”</p>
+        <ul>
+          <li>نختر القطعة اللي كاتليق وكتخدم</li>
+          <li>نتأكد من الجودة قبل ما توصل لك</li>
+          <li>كتسهل لك الطلب مباشرة عبر واتساب</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <p class="hero-eyebrow">تواصل معنا</p>
+        <h2>نستقبل طلبك مباشرة</h2>
+        <p>إذا عطاك فكر، أو محتاج قطعة خاصة، أكتب لنا على واتساب أو راسلنا عبر المنصات. كل الطلب يجاوب عليه فريق الهوتة شخصياً.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="https://wa.me/212779794263" target="_blank" rel="noreferrer">
+          <span class="contact-icon">WA</span>
+          <div>
+            <strong>واتساب</strong>
+            <small>212779794263</small>
+          </div>
+        </a>
+        <a class="contact-card" href="https://instagram.com" target="_blank" rel="noreferrer">
+          <span class="contact-icon">IG</span>
+          <div>
+            <strong>إنستغرام</strong>
+            <small>@lehawta</small>
+          </div>
+        </a>
+        <a class="contact-card" href="mailto:hello@lehawta.com">
+          <span class="contact-icon">@</span>
+          <div>
+            <strong>إيميل</strong>
+            <small>hello@lehawta.com</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== فوتر ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="logo-text">الهوتة</span>
+        <p class="footer-tag">سوق صغير، لقيات كبيرة.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">إنستغرام</a>
+        <a href="https://wa.me/212779794263" target="_blank" rel="noreferrer">واتساب</a>
+        <a href="https://tiktok.com" target="_blank" rel="noreferrer">تيكتوك</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
