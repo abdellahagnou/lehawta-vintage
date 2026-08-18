@@ -118,7 +118,7 @@ a { color: inherit; text-decoration: none; }
   left: 0;
   width: min(420px, 100%);
   height: 100vh;
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(29,23,20,0.98), rgba(17,13,9,0.98));
   border-left: 1px solid var(--line);
   box-shadow: -20px 0 40px rgba(0, 0, 0, 0.4);
   transform: translateX(-110%);
@@ -264,17 +264,24 @@ a { color: inherit; text-decoration: none; }
 
 .checkout-btn {
   width: 100%;
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
   color: var(--bg);
   border: none;
   padding: 14px 18px;
-  border-radius: var(--radius);
+  border-radius: 14px;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 12px 24px rgba(212,173,96,0.25);
 }
 
 .checkout-btn:hover {
-  background: var(--gold-bright);
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+}
+
+.checkout-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 @media (max-width: 640px) {
@@ -415,13 +422,17 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold-bright);
 }
 
-.filters { display: flex; gap: 8px; }
+.catalog-head .filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 .filter-btn {
-  background: var(--surface);
+  background: rgba(255,255,255,0.02);
   border: 1px solid var(--line);
   color: var(--ink-muted);
-  padding: 8px 18px;
+  padding: 9px 18px;
   border-radius: 999px;
   font-family: var(--font-body);
   font-size: 14px;
@@ -440,24 +451,28 @@ a { color: inherit; text-decoration: none; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
 }
 
 .card {
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(41,31,24,0.85), rgba(20,16,13,0.95));
   overflow: hidden;
-  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
-  border: 1px solid rgba(255,255,255,0.02);
-  border-radius: 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(212,173,96,0.18);
+  border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.card:hover { transform: translateY(-6px); border-color: rgba(212,173,96,0.45); }
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212,173,96,0.5);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.18);
+}
 
 .card-media {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   background: transparent;
   overflow: hidden;
 }
@@ -493,19 +508,22 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--rug-red);
 }
 
-.card-body { padding: 16px 4px; }
+.card-body {
+  padding: 18px 16px 20px;
+}
 .card-title {
-  font-size: 15px;
-  margin-bottom: 8px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--ink);
 }
 
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .card-price {
@@ -518,8 +536,8 @@ a { color: inherit; text-decoration: none; }
   background: transparent;
   border: 1px solid var(--gold);
   color: var(--gold-bright);
-  padding: 7px 16px;
-  border-radius: var(--radius);
+  padding: 8px 16px;
+  border-radius: 999px;
   font-family: var(--font-body);
   font-size: 13px;
   cursor: pointer;

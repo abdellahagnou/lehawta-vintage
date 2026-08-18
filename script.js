@@ -42,6 +42,7 @@ function renderCart() {
   if (cart.length === 0) {
     cartItemsEl.innerHTML = '<div class="cart-empty">السلة فاضية. اختار القطعة اللي تحبها.</div>';
     cartTotalEl.textContent = '0 درهم';
+    if (checkoutBtn) checkoutBtn.disabled = true;
     updateCartBadge();
     return;
   }
@@ -71,6 +72,7 @@ function renderCart() {
   }).join('');
 
   cartTotalEl.textContent = `${total} درهم`;
+  if (checkoutBtn) checkoutBtn.disabled = false;
   updateCartBadge();
 }
 
@@ -164,11 +166,11 @@ if (checkoutBtn) {
     if (cart.length === 0) return;
 
     const itemsText = cart
-      .map((item) => `${item.name} × ${item.quantity} = ${item.price * item.quantity} درهم`)
+      .map((item) => `• ${item.name} × ${item.quantity} = ${item.price * item.quantity} درهم`)
       .join('\n');
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const message = `السلام، بغيت نطلب: \n${itemsText}\n\nالمجموع: ${total} درهم`;
+    const message = `السلام، بغيت نطلب من متجر الهوتة:\n${itemsText}\n\nالمجموع النهائي: ${total} درهم\n\nأرغب في تأكيد الطلب. هل يمكنكم تجهيزوه لي؟`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, '_blank', 'noopener');
