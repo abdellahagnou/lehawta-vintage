@@ -1,0 +1,25 @@
+<svg width="240" height="140" viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="232" height="132" fill="none" stroke="#c9a24a" stroke-width="2.5"/>
+  <rect x="10" y="10" width="220" height="120" fill="none" stroke="#8a2f34" stroke-width="1"/>
+
+  <g transform="translate(24, 70)">
+    <path d="M0,-6 L2,-2 L6,0 L2,2 L0,6 L-2,2 L-6,0 L-2,-2 Z" fill="#e0bc63"/>
+  </g>
+  <g transform="translate(216, 70)">
+    <path d="M0,-6 L2,-2 L6,0 L2,2 L0,6 L-2,2 L-6,0 L-2,-2 Z" fill="#e0bc63"/>
+  </g>
+
+  <text x="120" y="62" text-anchor="middle"
+        font-family="'Lalezar', system-ui, sans-serif"
+        font-size="38" fill="#f1e9db">الهوتة</text>
+
+  <line x1="70" y1="78" x2="170" y2="78" stroke="#8a2f34" stroke-width="1.5"/>
+
+  <text x="120" y="98" text-anchor="middle"
+        font-family="'Tajawal', system-ui, sans-serif"
+        font-size="13" letter-spacing="5" fill="#e0bc63" font-weight="700">VINTAGE</text>
+
+  <text x="120" y="118" text-anchor="middle"
+        font-family="'Tajawal', system-ui, sans-serif"
+        font-size="9" letter-spacing="1" fill="#b3a493">قطعة وحيدة · كل مرة</text>
+</svg>
