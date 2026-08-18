@@ -698,6 +698,14 @@ a { color: inherit; text-decoration: none; }
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.5px;
+  overflow: hidden;
+}
+
+.contact-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  color: inherit;
 }
 
 .contact-card strong,
