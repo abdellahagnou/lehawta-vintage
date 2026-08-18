@@ -118,7 +118,7 @@ filterButtons.forEach((btn) => {
 });
 
 // ===== رقم الواتساب ديال الهوتة =====
-const whatsappNumber = '212779794263';
+const whatsappNumber = '212635854195';
 
 document.querySelectorAll('.btn-add').forEach((btn) => {
   if (btn.disabled) return;
