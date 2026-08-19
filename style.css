@@ -807,7 +807,7 @@ a { color: inherit; text-decoration: none; }
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
   flex: 1;
   align-items: stretch;
 }
@@ -817,11 +817,11 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
+  min-height: 38px;
   background: rgba(17, 12, 9, 0.9);
   border: 1px solid rgba(215, 176, 106, 0.72);
-  border-radius: 14px;
-  padding: 8px 10px;
+  border-radius: 12px;
+  padding: 6px 8px;
   color: var(--ink);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
@@ -838,7 +838,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0;
   aspect-ratio: 1;
   width: 100%;
-  min-width: 44px;
+  min-width: 38px;
 }
 
 .contact-badge {
@@ -849,13 +849,13 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, #f7d98e, #d2a85d);
   color: #0f0d0b;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .contact-badge svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   display: block;
   color: #111;
 }
@@ -898,18 +898,18 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
   .contact-card {
-    min-height: 42px;
-    padding: 8px 10px;
+    min-height: 34px;
+    padding: 6px 8px;
   }
 
   .contact-badge {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .contact-badge svg {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
   }
 
   .contact-cards {
