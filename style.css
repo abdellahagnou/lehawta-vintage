@@ -780,36 +780,43 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
-.contact-brand-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.contact-brand-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  flex-shrink: 0;
-}
-
-.contact-brand-logo .logo-img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(215, 176, 106, 0.18));
-}
-
-.contact-cards {
+.contact-cards.plain-icons {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 8px;
-  flex: 1;
-  align-items: stretch;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 18px;
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.contact-cards.plain-icons .contact-card {
+  min-height: 170px;
+  border: none;
+  border-radius: 22px;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+.contact-cards.plain-icons .contact-badge {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.contact-cards.plain-icons .contact-badge svg {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-cards.plain-icons .contact-card:nth-last-child(1) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 210px);
 }
 
 .contact-card {
@@ -885,35 +892,28 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 980px) {
-  .contact-brand-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .contact-cards {
-    width: 100%;
+  .contact-cards.plain-icons {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 767px) {
-  .contact-card {
-    min-height: 34px;
-    padding: 6px 8px;
+  .contact-cards.plain-icons {
+    gap: 12px;
   }
 
-  .contact-badge {
-    width: 100%;
-    font-size: 0.7rem;
+  .contact-cards.plain-icons .contact-card {
+    min-height: 130px;
+    border-radius: 18px;
   }
 
-  .contact-badge svg {
-    width: 12px;
-    height: 12px;
+  .contact-cards.plain-icons .contact-badge {
+    border-radius: 18px;
   }
 
-  .contact-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .contact-cards.plain-icons .contact-badge svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
