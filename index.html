@@ -325,6 +325,36 @@
 
 </div>
 
+<!-- Firebase (compat) - fill firebaseConfig below with your project keys -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+  // Replace the placeholder values with your Firebase project config.
+  // To create a project: https://console.firebase.google.com/
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "SENDER_ID",
+    appId: "APP_ID"
+  };
+
+  try {
+    firebase.initializeApp(firebaseConfig);
+    window._FH = {
+      app: firebase.app(),
+      auth: firebase.auth(),
+      db: firebase.firestore()
+    };
+    window.firebaseConfigured = true;
+  } catch (e) {
+    console.warn('Firebase init skipped or failed', e);
+    window.firebaseConfigured = false;
+  }
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>

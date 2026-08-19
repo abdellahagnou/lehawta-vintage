@@ -173,7 +173,39 @@ if (checkoutBtn) {
     const message = `السلام، بغيت نطلب من متجر الهوتة:\n${itemsText}\n\nالمجموع النهائي: ${total} درهم\n\nأرغب في تأكيد الطلب. هل يمكنكم تجهيزوه لي؟`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    window.open(url, '_blank', 'noopener');
+    // Send order to Firestore (if configured) and then open WhatsApp
+    const order = {
+      items: cart.map(i => ({ id: i.id, name: i.name, price: i.price, quantity: i.quantity })),
+      total,
+      message,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+      source: 'website'
+    };
+
+    if (window.firebaseConfigured && window._FH?.db) {
+      try {
+        // create a new document in orders
+        window._FH.db.collection('orders').add(order).then((ref) => {
+          console.log('Order saved:', ref.id);
+          // open WhatsApp after saving
+          window.open(url, '_blank', 'noopener');
+          // clear cart
+          cart = [];
+          renderCart();
+        }).catch(err => {
+          console.error('Failed to save order', err);
+          // fallback: open WhatsApp anyway
+          window.open(url, '_blank', 'noopener');
+        });
+      } catch (err) {
+        console.error('Firestore error', err);
+        window.open(url, '_blank', 'noopener');
+      }
+    } else {
+      // if firebase not configured just open WhatsApp
+      window.open(url, '_blank', 'noopener');
+    }
   });
 }
 
