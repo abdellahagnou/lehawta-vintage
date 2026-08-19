@@ -781,8 +781,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contact-cards {
-  display: grid;
-  gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .contact-card {
@@ -790,12 +793,14 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 10px;
+  flex: 1 1 200px;
+  min-width: 180px;
   background: rgba(17, 12, 9, 0.9);
   border: 1px solid rgba(215, 176, 106, 0.72);
-  border-radius: 22px;
-  min-height: 90px;
-  padding: 20px 24px 20px 86px;
+  border-radius: 18px;
+  min-height: 58px;
+  padding: 10px 14px 10px 56px;
   color: var(--ink);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
@@ -811,20 +816,20 @@ a { color: inherit; text-decoration: none; }
 .contact-badge {
   position: absolute;
   inset: 0 auto 0 0;
-  width: 64px;
+  width: 48px;
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, #f7d98e, #d2a85d);
   color: #0f0d0b;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 800;
   border-right: 1px solid rgba(15, 13, 11, 0.18);
 }
 
 .contact-badge svg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   display: block;
   color: #111;
 }
@@ -832,22 +837,23 @@ a { color: inherit; text-decoration: none; }
 .contact-value {
   flex: 1;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 1.5vw, 28px);
+  font-size: 14px;
   line-height: 1.4;
   text-align: left;
   font-weight: 500;
   direction: ltr;
   order: 1;
-  padding-left: 10px;
+  padding-left: 6px;
 }
 
 .contact-label {
   font-family: var(--font-display);
-  font-size: clamp(26px, 2vw, 38px);
+  font-size: 22px;
   line-height: 1.1;
   text-align: right;
   color: var(--gold-strong);
   order: 2;
+  white-space: nowrap;
 }
 
 .whatsapp-badge {
@@ -872,22 +878,27 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
   .contact-card {
-    min-height: 72px;
-    padding: 16px 18px 16px 70px;
-    gap: 12px;
+    min-height: 52px;
+    padding: 10px 12px 10px 48px;
+    gap: 8px;
   }
 
   .contact-badge {
-    width: 52px;
-    font-size: 1.1rem;
+    width: 42px;
+    font-size: 1rem;
+  }
+
+  .contact-badge svg {
+    width: 16px;
+    height: 16px;
   }
 
   .contact-label {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .contact-value {
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 0;
   }
 }
