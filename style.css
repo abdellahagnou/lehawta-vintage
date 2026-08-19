@@ -782,11 +782,15 @@ a { color: inherit; text-decoration: none; }
 
 .contact-cards.plain-icons {
   display: grid;
-  grid-template-columns: repeat(5, 34px);
-  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 34px;
+  gap: 6px;
   justify-content: center;
+  align-items: center;
   width: auto;
   margin: 0 auto;
+  overflow-x: auto; /* allow horizontal scroll on very narrow screens */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* small circular icon tiles */
@@ -819,11 +823,6 @@ a { color: inherit; text-decoration: none; }
   height: 25px;
   display: block;
   fill: currentColor;
-}
-
-/* center final item if layout wraps */
-.contact-cards.plain-icons .contact-card:nth-last-child(1) {
-  grid-column: auto;
 }
 
 .contact-card {
