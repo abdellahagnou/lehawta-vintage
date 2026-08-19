@@ -791,13 +791,12 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  justify-content: center;
   min-height: 58px;
   background: rgba(17, 12, 9, 0.9);
   border: 1px solid rgba(215, 176, 106, 0.72);
   border-radius: 18px;
-  padding: 10px 12px 10px 52px;
+  padding: 10px 12px;
   color: var(--ink);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
@@ -810,47 +809,34 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 14px 24px rgba(0,0,0,0.18);
 }
 
+.contact-card.icon-only {
+  padding: 0;
+  aspect-ratio: 1;
+  width: 100%;
+  min-width: 54px;
+}
+
 .contact-badge {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 48px;
   display: grid;
   place-items: center;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #f7d98e, #d2a85d);
   color: #0f0d0b;
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 800;
-  border-right: 1px solid rgba(15, 13, 11, 0.18);
 }
 
 .contact-badge svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: block;
   color: #111;
 }
 
-.contact-value {
-  flex: 1;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: left;
-  font-weight: 500;
-  direction: ltr;
-  order: 1;
-  padding-left: 6px;
-}
-
-.contact-label {
-  font-family: var(--font-display);
-  font-size: 22px;
-  line-height: 1.1;
-  text-align: right;
-  color: var(--gold-strong);
-  order: 2;
-  white-space: nowrap;
+.contact-value, .contact-label {
+  display: none;
 }
 
 .whatsapp-badge {
@@ -882,12 +868,11 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 767px) {
   .contact-card {
     min-height: 52px;
-    padding: 10px 12px 10px 48px;
-    gap: 8px;
+    padding: 10px 12px;
   }
 
   .contact-badge {
-    width: 42px;
+    width: 100%;
     font-size: 1rem;
   }
 
@@ -896,17 +881,8 @@ a { color: inherit; text-decoration: none; }
     height: 16px;
   }
 
-  .contact-label {
-    font-size: 18px;
-  }
-
-  .contact-value {
-    font-size: 12px;
-    padding-left: 0;
-  }
-
   .contact-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
