@@ -782,8 +782,8 @@ a { color: inherit; text-decoration: none; }
 
 .contact-cards.plain-icons {
   display: grid;
-  grid-template-columns: repeat(5, 56px);
-  gap: 12px;
+  grid-template-columns: repeat(5, 34px);
+  gap: 10px;
   justify-content: center;
   width: auto;
   margin: 0 auto;
@@ -791,8 +791,8 @@ a { color: inherit; text-decoration: none; }
 
 /* small circular icon tiles */
 .contact-cards.plain-icons .contact-card {
-  min-height: 56px;
-  width: 56px;
+  min-height: 34px;
+  width: 34px;
   border: none;
   border-radius: 50%;
   box-shadow: none;
@@ -805,8 +805,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contact-cards.plain-icons .contact-badge {
-  width: 56px;
-  height: 56px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -815,8 +815,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contact-cards.plain-icons .contact-badge svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   display: block;
   fill: currentColor;
 }
