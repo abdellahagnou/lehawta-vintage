@@ -782,41 +782,48 @@ a { color: inherit; text-decoration: none; }
 
 .contact-cards.plain-icons {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
-  gap: 18px;
-  width: min(620px, 100%);
+  grid-template-columns: repeat(5, 56px);
+  gap: 12px;
+  justify-content: center;
+  width: auto;
   margin: 0 auto;
 }
 
+/* small circular icon tiles */
 .contact-cards.plain-icons .contact-card {
-  min-height: 170px;
+  min-height: 56px;
+  width: 56px;
   border: none;
-  border-radius: 22px;
+  border-radius: 50%;
   box-shadow: none;
   background: transparent;
   padding: 0;
   aspect-ratio: 1;
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-cards.plain-icons .contact-badge {
-  width: 100%;
-  height: 100%;
-  border-radius: 22px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  box-shadow: none;
+  color: #fff; /* logos should be white */
 }
 
 .contact-cards.plain-icons .contact-badge svg {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
 }
 
+/* center final item if layout wraps */
 .contact-cards.plain-icons .contact-card:nth-last-child(1) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(100%, 210px);
+  grid-column: auto;
 }
 
 .contact-card {
