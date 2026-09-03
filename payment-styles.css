@@ -1,0 +1,309 @@
+/* Payment Modal Styles - Add to your style.css */
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Payment Method Modal */
+.payment-modal,
+.payment-form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 60;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.payment-modal.is-open,
+.payment-form-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(135deg, #17120f 0%, #1a1411 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  min-width: 360px;
+  max-width: 500px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-size: 28px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--surface-3);
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--gold-strong);
+}
+
+.modal-subtitle {
+  color: var(--ink-muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-method-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: right;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.payment-method-btn:hover {
+  border-color: var(--gold);
+  background: var(--surface-3);
+  transform: translateX(-4px);
+}
+
+.payment-icon {
+  font-size: 32px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-info h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.payment-info p {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.method-arrow {
+  width: 20px;
+  height: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Stripe Payment Form */
+#stripe-payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold-strong);
+}
+
+.form-group input {
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.form-group input::placeholder {
+  color: var(--ink-muted);
+}
+
+/* Stripe Card Element */
+.stripe-card-element {
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+/* Order Summary in Stripe Form */
+.order-summary-stripe {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.order-summary-stripe h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 0;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--surface-3);
+}
+
+.item-row:last-of-type {
+  border-bottom: none;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.summary-row.total {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold-strong);
+}
+
+/* Payment Submit Button */
+.payment-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-strong) 100%);
+  border: none;
+  border-radius: 8px;
+  color: #1a1411;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(215, 176, 106, 0.3);
+}
+
+.payment-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payment-security {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .modal-content {
+    min-width: auto;
+    max-width: 90vw;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .payment-method-btn {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .payment-icon {
+    font-size: 28px;
+    min-width: 40px;
+  }
+
+  .payment-info h3 {
+    font-size: 14px;
+  }
+
+  .payment-info p {
+    font-size: 12px;
+  }
+}
