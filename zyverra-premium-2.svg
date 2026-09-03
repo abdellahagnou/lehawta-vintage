@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zyverra premium variant 2">
+  <defs>
+    <linearGradient id="gld2" x1="0" x2="1">
+      <stop offset="0" stop-color="#F9E0B3"/>
+      <stop offset="1" stop-color="#C79B4A"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(12,10)">
+    <circle cx="44" cy="44" r="42" fill="#0F0C0A" stroke="url(#gld2)" stroke-width="2" />
+    <g transform="translate(28,24)" fill="url(#gld2)">
+      <path d="M6 6 L18 6 L12 30z" />
+    </g>
+    <text x="26" y="72" font-family="Georgia, serif" font-size="28" fill="url(#gld2)" font-weight="700">Z</text>
+  </g>
+  <g transform="translate(120,74)">
+    <text x="0" y="-6" font-family="Times, serif" font-size="36" fill="#C79B4A">Zyverra</text>
+    <text x="220" y="-6" font-family="Times, serif" font-size="14" fill="#C79B4A" opacity="0.9">AI</text>
+  </g>
+</svg>
