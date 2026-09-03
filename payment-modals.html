@@ -1,0 +1,83 @@
+<!-- Payment Modal - Add this before the closing </body> tag in index.html -->
+
+<!-- Payment Method Selection Modal -->
+<div class="modal-overlay" id="payment-modal-overlay" aria-hidden="true"></div>
+<div class="payment-modal" id="payment-modal" aria-hidden="true" role="dialog" aria-labelledby="payment-modal-title">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="إغلاق" id="payment-modal-close">×</button>
+    
+    <h2 id="payment-modal-title">اختر طريقة الدفع</h2>
+    <p class="modal-subtitle">الدفع آمن وسهل</p>
+    
+    <div class="payment-methods">
+      <!-- Stripe Payment -->
+      <button class="payment-method-btn" id="stripe-payment-btn">
+        <div class="payment-icon">💳</div>
+        <div class="payment-info">
+          <h3>الدفع بالبطاقة</h3>
+          <p>Visa, Mastercard, أو أي بطاقة</p>
+        </div>
+        <svg class="method-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- WhatsApp Payment -->
+      <button class="payment-method-btn" id="whatsapp-payment-btn">
+        <div class="payment-icon">💬</div>
+        <div class="payment-info">
+          <h3>طلب عبر واتساب</h3>
+          <p>اطلب مباشرة وتواصل معنا</p>
+        </div>
+        <svg class="method-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Stripe Payment Form Modal -->
+<div class="modal-overlay" id="stripe-modal-overlay" aria-hidden="true"></div>
+<div class="payment-form-modal" id="stripe-form-modal" aria-hidden="true" role="dialog" aria-labelledby="stripe-form-title">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="إغلاق" id="stripe-form-close">×</button>
+    
+    <h2 id="stripe-form-title">إكمال الدفع</h2>
+    
+    <form id="stripe-payment-form">
+      <div class="form-group">
+        <label for="customer-name">الاسم الكامل</label>
+        <input type="text" id="customer-name" required placeholder="محمد أحمد">
+      </div>
+      
+      <div class="form-group">
+        <label for="customer-email">البريد الإلكتروني</label>
+        <input type="email" id="customer-email" required placeholder="you@example.com">
+      </div>
+
+      <!-- Stripe Card Element will be mounted here -->
+      <div class="form-group">
+        <label for="card-element">بيانات البطاقة</label>
+        <div id="card-element" class="stripe-card-element"></div>
+        <div id="card-errors" class="error-message"></div>
+      </div>
+
+      <div class="order-summary-stripe">
+        <h3>ملخص الطلب</h3>
+        <div id="stripe-order-items"></div>
+        <div class="summary-row total">
+          <span>المجموع</span>
+          <span id="stripe-total">0 درهم</span>
+        </div>
+      </div>
+
+      <button type="submit" class="payment-submit-btn" id="stripe-submit">
+        <span id="stripe-submit-text">الدفع الآن</span>
+        <span id="stripe-submit-loading" style="display:none;">جاري المعالجة...</span>
+      </button>
+
+      <p class="payment-security">🔒 الدفع آمن وموثوق</p>
+    </form>
+  </div>
+</div>
