@@ -341,7 +341,12 @@
     appId: "APP_ID"
   };
 
-  try {
+const hasFirebaseConfig = Object.values(firebaseConfig).every((value) => {
+  return typeof value === 'string' && value.trim().length > 0 && !value.startsWith('YOUR_') && !value.startsWith('SENDER_ID') && !value.startsWith('APP_ID');
+});
+
+try {
+  if (typeof firebase !== 'undefined' && hasFirebaseConfig) {
     firebase.initializeApp(firebaseConfig);
     window._FH = {
       app: firebase.app(),
@@ -349,10 +354,13 @@
       db: firebase.firestore()
     };
     window.firebaseConfigured = true;
-  } catch (e) {
-    console.warn('Firebase init skipped or failed', e);
+  } else {
     window.firebaseConfigured = false;
   }
+} catch (e) {
+  console.warn('Firebase init skipped or failed', e);
+  window.firebaseConfigured = false;
+}
 </script>
 
 <script src="script.js"></script>
